@@ -24,6 +24,7 @@ py -m venv .venv
 ni requirements.txt
 
 py -m pip install -r requirements.txt
+python.exe -m pip install --upgrade pip
 ```
 
 ### Step 6. Add gitignore and  with .vscode/ and .venv/ and whatever else doesn't need to go in the repo.
@@ -37,19 +38,16 @@ ni gitignore
 ### Step 7. Add script
 
 ```shell
-brennan_sql.py
+ni waterfowl_sql.py
 ```
 
 ### Step 8. Add dependencies
 
 ```shell
 
-py -m pip install jupyterlab
-py -m pip install numpy
+
 py -m pip install pandas
-py -m pip install matplotlib 
-py -m pip install seaborn
-py -m pip install scipy
+py -m pip install pandas pyarrow
 ```
 
 ### Step 9. Freeze dependencies
@@ -65,5 +63,4 @@ py -m pip freeze > requirements.txt
 git add .
 git commit -m "add .gitignore, cmds to readme"
 git push origin main
-```# datafun-05-sql-project
-Project 5 SQL 
+```
